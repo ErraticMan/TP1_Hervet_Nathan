@@ -1,0 +1,26 @@
+<br><br><br><div class="container">
+  <div class="list-group-item active"><h4>Message : </h4></div>
+  <div class="list-group-item">
+{{textarea class="form-control" value=model.content
+        placeholder="Entrez votre texte.."}}
+</div>
+  <div class="list-group-item">
+  <button class="btn btn-lg btn-primary" {{action "save" model}}>Enregistrer</button>
+  <button class="btn btn-lg btn-primary" {{action "effacer" model}}>Effacer</button>
+  </div>
+  <div class="list-group-item">
+    <div class ={{model.warning}}> Il reste : {{model.reste}} caractères</div>
+  </div>
+  {{#if model.info}}
+  <div class="list-group-item">
+  <div class="alert alert-success" role="alert">
+
+    {{model.info}}
+  </div>
+  </div>
+  {{/if}}
+
+</div>
+
+
+{{outlet}}
