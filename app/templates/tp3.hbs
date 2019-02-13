@@ -1,0 +1,38 @@
+<br><br><br><br>
+<div class="divcolor div2 rounded">
+<div class="container divcolor">
+  <br>
+  <p class="titre">Selectionnez vos produits</p>
+  <br>
+<div class="row">
+  <div class="col-sm-5">{{multi-select elements=model.dispoItems selectedIds=model.dispoItemsIds_}}</div>
+  <div class="col-sm-2" align="center">
+    {{#bs-button block=true onClick=(action "addToIncluded")}}
+    {{fa-icon "fas fa-angle-right"}}
+  {{/bs-button}}
+    <br>
+    {{#bs-button block=true}}
+      {{fa-icon "fas fa-angle-left"}}
+    {{/bs-button}}
+    <br>
+    {{#bs-button block=true}}
+      {{fa-icon "fas fa-angle-double-right"}}
+    {{/bs-button}}
+    <br>
+    {{#bs-button block=true}}
+      {{fa-icon "fas fa-angle-double-left"}}
+    {{/bs-button}}
+  </div>
+  <div class="col-sm-5">{{multi-select elements=model.includedItems
+                                       selected=model.includedItemsIds_}}</div>
+</div>
+  <br>
+  {{#bs-button block=true}}
+    Etape Suivante
+    {{fa-icon "fas fa-arrow-circle-right"}}
+  {{/bs-button}}
+</div>
+  <br>
+  <br>
+</div>
+{{outlet}}

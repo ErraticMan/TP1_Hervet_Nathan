@@ -1,0 +1,40 @@
+<br><br><div id="conteneur" class="container rounded">
+  <br>
+  <h2><p class="title">Services</p></h2>
+  <div class="list-group align-items-center">
+    <div class="alert alert-info" role="alert">
+      <p class="taille">Choississez les éléments à inclure</p>
+      <p class="taille2">Vous avez inclut {{model.countActive}} élements</p>
+    </div>
+    {{#each model.services as |tp2|}}
+      {{#if tp2.active}}
+        <div class="alert alert-success rounded" role="alert">
+          <p><div style="float : left">
+          {{input type="checkbox" checked=tp2.active}}
+          </div>
+          <div style="float: left">{{tp2.name}}</div>
+          <div style="float: right">{{tp2.price}}€</div>
+        </p>
+        </div>
+      {{else}}
+        <div class="alert alert-dark rounded" role="alert">
+          <p><div style="float : left">
+            {{input type="checkbox" checked=tp2.active}}
+          </div>
+          <div style="float: left">{{tp2.name}}</div>
+          <div style="float: right">{{tp2.price}}€</div>
+        </p>
+        </div>
+      {{/if}}
+    {{/each}}
+    <div class="total"><h6>Total : {{model.sumActive}}€</h6></div>
+    <div>
+      {{input type="checkbox"}}
+      {{input type="texte" class="rounded" placeholder="Code promo..." value=model.promo}}
+    </div>
+    Promo : {{model.countPromo}}
+    <br>
+  </div>
+</div>
+{{outlet}}
+

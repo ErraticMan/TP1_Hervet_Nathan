@@ -1,0 +1,57 @@
+#conteneur{
+  width:450px;
+  background-color: #61A1BC;
+}
+#boutton{
+  width: 280px;
+  align-content: center;
+}
+
+.droite{
+  text-align: right;
+}
+
+.gauche{
+  text-align: left;
+}
+
+.total{
+  width: 230px;
+  color: white;
+  text-align: left;
+}
+
+.title{
+  text-align: center;
+  color: white;
+}
+
+.alert{
+  width: 280px;
+}
+
+.taille{
+  font-size: 12px;
+  color:#7B92A5;
+  text-align : left;
+
+}
+.taille2{
+  font-size: 10px;
+  color:#7B92A5;
+  text-align : left;
+}
+
+.divcolor{
+  background-color:#61A1BC;
+}
+
+.titre{
+  color: white;
+  font-size : 40px;
+  text-align: center
+}
+.div2{
+  margin-left:100px;
+  margin-right:100px;
+}

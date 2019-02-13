@@ -8,6 +8,7 @@ export default Controller.extend({
       console.log('Sauvegarde :' + note.get('content'));
     },
     effacer(note){
+      note.set('info',null);
       note.set('content','');
       console.log('Texte effacé');
     }
